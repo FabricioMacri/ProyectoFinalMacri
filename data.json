@@ -1,0 +1,140 @@
+
+{
+    "users" : [
+    {
+
+    "ID" : 1,
+    "user" : "pepe",
+    "password" : "elpepo",
+    "zone" : "",
+    "service" : "",
+    "style" : ""
+},
+{
+    "ID" : 2,
+    "user" : "jose",
+    "password" : "donjose",
+    "zone" : "",
+    "service" : "",
+    "style" : ""
+},
+{
+    "ID" : 3,
+    "user" : "ricardo",
+    "password" : "123",
+    "zone" : "",
+    "service" : "",
+    "style" : ""
+}
+    ],
+    "restos" : [
+        {
+            "ID" : 1,
+            "Nombre": "Mateo",
+            "Categorias" : ["Bebidas", "Cafeteria", "Pasteleria", "Minutas"],
+            "Productos" : [
+
+                {"nombre" : "Agua", "categoria" : "Bebidas", "precio" : 250},
+                {"nombre" : "Gaseosa", "precio" : 680},
+                {"nombre" : "Schweppes", "precio" : 550},
+                {"nombre" : "Agua saborizada", "precio" : 620},
+                {"nombre" : "Copa de vino", "precio" : 900},
+
+                {"nombre" : "Pocillo", "categoria" : "Cafeteria", "precio" : 520},
+                {"nombre" : "Americano",  "categoria" : "Cafeteria", "precio" : 650},
+                {"nombre" : "Cafe con leche",  "categoria" : "Cafeteria", "precio" : 720},
+                {"nombre" : "Capuccino",  "categoria" : "Cafeteria", "precio" : 1050},
+                {"nombre" : "Submarino",  "categoria" : "Cafeteria", "precio" : 1050},
+
+                {"nombre" : "Facturas", "categoria" : "Pasteleria", "precio" : 700},
+                {"nombre" : "Chocotorta", "categoria" : "Pasteleria",  "precio" : 1300},
+                {"nombre" : "Carrot cake", "categoria" : "Pasteleria",  "precio" : 1700},
+                {"nombre" : "Red velvet", "categoria" : "Pasteleria",  "precio" : 2100},
+                {"nombre" : "Marquiz de chocolate", "categoria" : "Pasteleria",  "precio" : 2500},
+
+                {"nombre" : "Milanesa con guarnición", "categoria" : "Minutas",  "precio" : 3060},
+                {"nombre" : "Filete de merluza con guarnición", "categoria" : "Minutas",  "precio" : 2300},
+                {"nombre" : "Ravioles", "categoria" : "Minutas",  "precio" : 2300},
+                {"nombre" : "Sorrentinos", "categoria" : "Minutas",  "precio" : 2500},
+                {"nombre" : "Tortilla de papa", "categoria" : "Minutas",  "precio" : 1650}
+            
+            ],
+            "Zona" : "Caballito",
+            "Servicio" : ["Desayuno", "Brunch", "Almuerzo", "Merienda"],
+            "Estilo" : "Confiteria",
+            "Puntuacion" : 3,
+            "Envio" : "gratis",
+            "Demora" : "30-40 min"
+        },
+        {
+            "ID" : 2,
+            "Nombre": "La Cabrera",
+            "Categorias" : ["Bebidas", "Cafeteria", "Parrilla", "Minutas"],
+            "Productos" : [
+
+                {"nombre" : "Agua", "categoria" : "Bebidas", "precio" : 250},
+                {"nombre" : "Gaseosa", "precio" : 680},
+                {"nombre" : "Schweppes", "precio" : 550},
+                {"nombre" : "Agua saborizada", "precio" : 620},
+                {"nombre" : "Copa de vino", "precio" : 900},
+
+                {"nombre" : "Pocillo", "categoria" : "Cafeteria", "precio" : 520},
+                {"nombre" : "Americano",  "categoria" : "Cafeteria", "precio" : 650},
+                {"nombre" : "Cafe con leche",  "categoria" : "Cafeteria", "precio" : 720},
+                {"nombre" : "Capuccino",  "categoria" : "Cafeteria", "precio" : 1050},
+                {"nombre" : "Submarino",  "categoria" : "Cafeteria", "precio" : 1050},
+
+                {"nombre" : "Parrillada simple", "categoria" : "Parrilla", "precio" : 3000},
+                {"nombre" : "Parrillada para compartir", "categoria" : "Parrilla",  "precio" : 6000},
+                {"nombre" : "Pollo a la parrilla", "categoria" : "Parrilla",  "precio" : 2500},
+                {"nombre" : "Plus de achuras", "categoria" : "Parrilla",  "precio" : 1500},
+                {"nombre" : "Parrillada premium", "categoria" : "Parrilla",  "precio" : 4000},
+
+                {"nombre" : "Milanesa con guarnición", "categoria" : "Minutas",  "precio" : 3060},
+                {"nombre" : "Filete de merluza con guarnición", "categoria" : "Minutas",  "precio" : 2300},
+                {"nombre" : "Ravioles", "categoria" : "Minutas",  "precio" : 2300},
+                {"nombre" : "Sorrentinos", "categoria" : "Minutas",  "precio" : 2500},
+                {"nombre" : "Tortilla de papa", "categoria" : "Minutas",  "precio" : 1650}
+            
+            ],
+            "Zona" : "Villa Crespo",
+            "Servicio" : ["Almuerzo", "Merienda", "Cena"],
+            "Estilo" : "Parrilla",
+            "Puntuacion" : 5,
+            "Envio" : "$300",
+            "Demora" : "20-30 min"
+        },
+        {
+            "ID" : 3,
+            "Nombre": "Blest",
+            "Categorias" : ["Bebidas", "Hamburguesas", "Cervezas"],
+            "Productos" : [
+
+                {"nombre" : "Agua", "categoria" : "Bebidas", "precio" : 250},
+                {"nombre" : "Gaseosa", "precio" : 680},
+                {"nombre" : "Schweppes", "precio" : 550},
+                {"nombre" : "Agua saborizada", "precio" : 620},
+                {"nombre" : "Copa de vino", "precio" : 900},
+
+                {"nombre" : "Hamburguesa Simple", "categoria" : "Hamburguesas", "precio" : 1500},
+                {"nombre" : "Hamburguesa con cheddar y bacon", "categoria" : "Hamburguesas",  "precio" : 2000},
+                {"nombre" : "Hamburguesa Completa", "categoria" : "Hamburguesas",  "precio" : 2500},
+                {"nombre" : "Turbo tasty", "categoria" : "Hamburguesas",  "precio" : 3500},
+                {"nombre" : "Staker atomic 5.0", "categoria" : "Hamburguesas",  "precio" : 4000},
+
+                {"nombre" : "Honney", "categoria" : "Cervezas",  "precio" : 1200},
+                {"nombre" : "IPA", "categoria" : "Cervezas",  "precio" : 1500},
+                {"nombre" : "APA", "categoria" : "Cervezas",  "precio" : 1500},
+                {"nombre" : "NEIPA", "categoria" : "Cervezas",  "precio" : 1800},
+                {"nombre" : "Red IPA", "categoria" : "Cervezas",  "precio" : 1700}
+            
+            ],
+            "Zona" : "Palermo",
+            "Servicio" : ["Cena", "Tragos"],
+            "Estilo" : "Cerveceria",
+            "Puntuacion" : 4,
+            "Envio" : "$150",
+            "Demora" : "10-20 min"
+        }
+    ]
+}

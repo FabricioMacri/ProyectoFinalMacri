@@ -13,7 +13,7 @@ La aplicacion esta pensada para que el usuario ingrese con su cuenta, seleccione
 
   ARCHIVOS:
 
-  Informacion: data.json
-  Orden de HTML: Index -> preferencias
-  Orden de JS: Login -> setPreferencias
-  CCS: Style y Bootstrap 5
+  Informacion: data.json .
+  Orden de HTML: Index -> preferencias .
+  Orden de JS: Login -> setPreferencias .
+  CCS: Style y Bootstrap 5 .

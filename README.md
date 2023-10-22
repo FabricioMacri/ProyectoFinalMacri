@@ -10,3 +10,10 @@ La aplicacion esta pensada para que el usuario ingrese con su cuenta, seleccione
 
  El proyecto cuenta con un archivo JSON llamado "data.json" donde se encunetra toda la informacion de usuarios y restaurantes, desde este puede manipularse la informacion para hacer preubas.
   Este archivo cuenta con 3 usuarios y 3 restaurantes para probarlo.
+
+  ARCHIVOS:
+
+  Informacion: data.json
+  Orden de HTML: Index -> preferencias
+  Orden de JS: Login -> setPreferencias
+  CCS: Style y Bootstrap 5

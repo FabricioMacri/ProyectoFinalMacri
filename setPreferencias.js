@@ -244,6 +244,8 @@ function createServicePage() {
 
     img.setAttribute("src", "./image/servicio.png");
 
+    input.setAttribute("placeholder", "Indique un servicio");
+
     btn.onclick = () => { 
         preferencias.push(localStorage.getItem("preferencias"));
         input.value = "";
@@ -256,6 +258,8 @@ function createServicePage() {
 function createStylePage() {
 
     img.setAttribute("src", "./image/estilo.png");
+
+    input.setAttribute("placeholder", "Indique un estilo");
     
     btn.onclick = () => { 
         preferencias.push(localStorage.getItem("preferencias"));

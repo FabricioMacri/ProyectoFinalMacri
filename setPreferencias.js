@@ -3,9 +3,11 @@ En esta parte seteamos una a una las preferencias del cliente para
 filtrarle una lista de restaurantes que se adecuen a sus preferencias
 
 */
-//Variable para saber en que parte del proceso estamos
+//Lista que acumula las preferncias
 
 preferencias = [];
+
+//Generador HTML de pagina inicial
 
 const conatiner = document.createElement("div");
 const row = document.createElement("div");
@@ -75,8 +77,6 @@ center.appendChild(input);
 center.appendChild(btnAtras);
 center.appendChild(btn);
 
-//Funcion modificadora del input
-
 //Funciones de los botones
 
 function chekZone(){
@@ -122,7 +122,7 @@ function callStyle(){
 
 
 }
-function filterResto(){ //Anda pero hay que ajustar un poco mas la busqueda 
+function filterResto(){ 
 
     fetch("./data.json")
         .then(response => { return response.json(); })
@@ -181,7 +181,7 @@ function filterResto(){ //Anda pero hay que ajustar un poco mas la busqueda
               Swal.fire({
                 icon: 'warning',
                 title: 'No hay restaurantes con esas caracteristicas',
-                text: 'Intente buscar en otra zona'
+                text: 'Intente buscar en otra zona o deje en blanco alguna preferencia para una busqueda mas generica.'
                 
               })
 
@@ -298,11 +298,25 @@ function createResto(resto) {
 
     cardTittle.textContent = resto.Nombre;
     cardText.textContent = resto.Zona;
-    textWarning.innerHTML = "&#9733";
+    textWarning.innerHTML = "&#9733"; //UNICODE para estrella
     textMuted.textContent = resto.Puntuacion + " / " + resto.Demora + " / " + resto.Envio;
 
     reservar.textContent = "reservar";
     pedir.textContent = "pedir";
+
+    reservar.onclick = () => {
+
+        Swal.fire({
+            icon: 'sucess',
+            title: 'Su reserva fue registrada',
+            text: 'Restaurante: ' + resto.Nombre +
+            "\nZona: " + resto.Nombre + 
+            "A nombre de: " + localStorage.getItem("user")
+            
+          })
+
+
+    }
 
     document.body.append(conatiner);
     conatiner.appendChild(row);
@@ -331,10 +345,5 @@ function removePage() {
     const container = document.getElementById("contenedorPreferencias");
     container.remove();
 }
-
-
-
-
-
 
 

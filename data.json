@@ -62,7 +62,7 @@
             "Zona" : "Caballito",
             "Servicio" : ["Desayuno", "Brunch", "Almuerzo", "Merienda"],
             "Estilo" : "Confiteria",
-            "Puntuacion" : 3.0,
+            "Puntuacion" : "3.0",
             "Envio" : "gratis",
             "Demora" : "30-40 min"
         },
@@ -100,7 +100,7 @@
             "Zona" : "Villa Crespo",
             "Servicio" : ["Almuerzo", "Merienda", "Cena"],
             "Estilo" : "Parrilla",
-            "Puntuacion" : 5.0,
+            "Puntuacion" : "5.0",
             "Envio" : "$300",
             "Demora" : "20-30 min"
         },
@@ -132,7 +132,7 @@
             "Zona" : "Palermo",
             "Servicio" : ["Cena", "Tragos"],
             "Estilo" : "Cerveceria",
-            "Puntuacion" : 4.0,
+            "Puntuacion" : "4.0",
             "Envio" : "$150",
             "Demora" : "10-20 min"
         }

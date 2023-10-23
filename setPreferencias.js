@@ -124,9 +124,6 @@ function callStyle(){
 }
 function filterResto(){ //Anda pero hay que ajustar un poco mas la busqueda 
 
-    removePage();
-    createStylePage();
-
     fetch("./data.json")
         .then(response => { return response.json(); })
         .then( List => {
@@ -174,12 +171,10 @@ function filterResto(){ //Anda pero hay que ajustar un poco mas la busqueda
 
             if (reSearch.length > 0) {
               
-                Swal.fire({
-                    icon: 'sucess',
-                    title: 'Lo encontraste bro',
-                    text: 'Salio: ' + reSearch[0]
-                    
-                  })
+                console.log("entro");
+                removePage();
+                reSearch.forEach((resto) => { createResto(resto) })
+                
             }
 
             else {
@@ -270,9 +265,68 @@ function createStylePage() {
     aplicarCambios()
 }
 //RESTO
-function createResto() {}
+function createResto(resto) {
+
+    const card = document.createElement("div");
+    const cardBody = document.createElement("div");
+    const cardTittle = document.createElement("h5");
+    const cardText = document.createElement("p");
+    const dFlex = document.createElement("div");
+    const mr = document.createElement("span");
+    const textWarning = document.createElement("span");
+    const textMuted = document.createElement("span");
+    const reservar = document.createElement("button");
+    const pedir = document.createElement("button");
+
+    card.classList.add("card");
+    cardBody.classList.add("card-body");
+    cardTittle.classList.add("card-tittle");
+    cardText.classList.add("card-text");
+    cardText.classList.add("text-muted");
+    dFlex.classList.add("d-flex");
+    dFlex.classList.add("align-items-center");
+    dFlex.classList.add("mb-3");
+    mr.classList.add("mr-2");
+    textWarning.classList.add("text-warning");
+    textMuted.classList.add("text-muted");
+    reservar.classList.add("botonInicio");
+    reservar.classList.add("btn");
+    reservar.classList.add("text-white");
+    pedir.classList.add("botonInicio");
+    pedir.classList.add("btn");
+    pedir.classList.add("text-white");
+
+    cardTittle.textContent = resto.Nombre;
+    cardText.textContent = resto.Zona;
+    textWarning.innerHTML = "&#9733";
+    textMuted.textContent = resto.Puntuacion + " / " + resto.Demora + " / " + resto.Envio;
+
+    reservar.textContent = "reservar";
+    pedir.textContent = "pedir";
+
+    document.body.append(conatiner);
+    conatiner.appendChild(row);
+    row.appendChild(col);
+
+    col.appendChild(card);
+    card.appendChild(cardBody);
+    cardBody.appendChild(cardTittle);
+    cardBody.appendChild(cardText);
+    cardBody.appendChild(dFlex);
+    dFlex.appendChild(mr);
+    mr.appendChild(textWarning);
+    mr.appendChild(textMuted);
+    cardBody.appendChild(reservar);
+    cardBody.appendChild(pedir);
+
+
+
+
+}
 //BORRAR HTML
 function removePage() {
+
+    center.remove();
 
     const container = document.getElementById("contenedorPreferencias");
     container.remove();

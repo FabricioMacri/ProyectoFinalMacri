@@ -27,3 +27,54 @@ body {
     margin-right: 20px;
     background-color: #FD4601;
 }
+
+.TITULOS {
+
+    color: #ffffff;
+    font-weight: bold;
+}
+
+section {
+
+    background-color: #FD4601;
+    margin: 20px;
+}
+
+ul {
+
+    list-style-type: none;
+}
+
+.itemsSecc {
+
+    margin: 10px; 
+    background-color: #FD4601;
+}
+
+.menuStyle {
+
+    background-color: #FD4601;
+}
+
+.productoButton {
+
+    margin-top: 20px; 
+    width: 100px; 
+    background-color: #ff894e; 
+    border-color: #FFFFFF; 
+    border-width: 3px; 
+    border-radius: 5px; 
+    border-style:solid; 
+    padding: 5px;
+}
+
+.elementosCarrito {
+
+    border-color: #ffffff;
+    border-width: 3px; 
+    border-radius: 5px; 
+    border-style:solid; 
+    padding: 5px;
+}
+
+

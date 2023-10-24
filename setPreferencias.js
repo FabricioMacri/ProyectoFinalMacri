@@ -7,6 +7,10 @@ filtrarle una lista de restaurantes que se adecuen a sus preferencias
 
 preferencias = [];
 
+const plantillaCompras = document.getElementById("plantillaCompras");
+
+plantillaCompras.remove();
+
 //Generador HTML de pagina inicial
 
 const conatiner = document.createElement("div");
@@ -299,10 +303,18 @@ function createResto(resto) {
     cardTittle.textContent = resto.Nombre;
     cardText.textContent = resto.Zona;
     textWarning.innerHTML = "&#9733"; //UNICODE para estrella
-    textMuted.textContent = resto.Puntuacion + " / " + resto.Demora + " / " + resto.Envio;
+    textMuted.textContent = resto.Puntuacion + " / " + resto.Demora + " / Envio: " + resto.Envio;
 
     reservar.textContent = "reservar";
     pedir.textContent = "pedir";
+
+    pedir.onclick = () => {
+
+        removePage();
+        document.body.append(plantillaCompras);
+        cargarResto(resto);
+
+    }
 
     reservar.onclick = () => {
 

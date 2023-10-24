@@ -144,7 +144,7 @@ function filterResto(){
 
             List.restos.forEach((resto) => {
 
-                let chekServicio = resto.Categorias.some((cat) => cat.toUpperCase() == servicio.toUpperCase() );
+                let chekServicio = resto.Servicio.some((cat) => cat.toUpperCase() == servicio.toUpperCase() );
                 if (chekServicio) auxServicio.push(resto);
 
                 if (estilo.toUpperCase() == resto.Estilo.toUpperCase()) auxEstilo.push(resto);

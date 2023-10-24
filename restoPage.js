@@ -30,12 +30,12 @@ function agregarItem(ID) {
 
     let Producto = resto.Productos.find((prod) => prod.Id == ID);
 
-    let prodName = document.createElement("h5");
+    let prodName = document.createElement("p");
     prodName.classList.add("card-title");
-    prodName.classList.add("TITULOS");
+    //prodName.classList.add("TITULOS");
     prodName.classList.add("elementosCarrito");
     prodName.id = "PD" + ID;
-    prodName.textContent = Producto.Nombre + "\n$" + Producto.Precio;
+    prodName.textContent = Producto.nombre + "\n$" + Producto.precio;
     carrito.appendChild(prodName);
 
     let newButton = document.createElement("a");
@@ -43,7 +43,7 @@ function agregarItem(ID) {
     newButton.setAttribute("role", "button");
     newButton.classList.add("btn");
     newButton.classList.add("btn-primary");
-    newButton.textContent = "Quitar";
+    newButton.textContent = "-";
     newButton.id = "BTN" + ID;
 
     newButton.onclick = () => {Quitar(String(Producto.Id))}
@@ -51,9 +51,9 @@ function agregarItem(ID) {
     carrito.appendChild(newButton);
 
 
-    Total = Total + Producto.Precio;
+    Total = Total + Producto.precio;
 
-    const totalPedido = document.querySelector("#Total");
+    const totalPedido = document.querySelector("#dropdownMenuButton1");
 
     totalPedido.textContent = "Total: $" + Total;
 }
@@ -68,9 +68,9 @@ function Quitar(ID){
 
     let Producto = resto.Productos.find((prod) => prod.Id == ID);
 
-    Total = Total - Producto.Precio;
+    Total = Total - Producto.precio;
 
-    const totalPedido = document.querySelector("#Total");
+    const totalPedido = document.querySelector("#dropdownMenuButton1");
 
     totalPedido.textContent = "Total: $" + Total;
 

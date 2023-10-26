@@ -159,6 +159,18 @@ const botonPagar = document.querySelector("#botonPagar");
 
 //botonPagar.onclick = () => {Pagar()}
 
+const volver = document.getElementById("volverResto");
+volver.onclick = () => { 
+    
+    const plantillaCompras = document.getElementById("plantillaCompras");
+    plantillaCompras.remove();
+    while (document.body.lastElementChild != undefined){
+
+        let aux = document.body.lastElementChild;
+        document.body.removeChild(aux);
+    }
+    createZonePage(); 
+}
 
 //Indico en la parte superior los datos del restaurante
 

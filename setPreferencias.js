@@ -3,6 +3,8 @@ En esta parte seteamos una a una las preferencias del cliente para
 filtrarle una lista de restaurantes que se adecuen a sus preferencias
 
 */
+
+let Page = "ubicacion";
 //Lista que acumula las preferncias
 
 preferencias = [];
@@ -47,6 +49,7 @@ btn.classList.add("text-white");
 btn.textContent = "Siguiente";
 
 btn.onclick = () => { 
+
     preferencias.push(localStorage.getItem("preferencias"));
     input.value = "";
     chekZone(); 
@@ -60,6 +63,7 @@ btnAtras.textContent = "Atrás";
 
 btnAtras.onclick = () => { 
 
+    preferencias.pop();
     removePage();
     if(Page === "ubicacion") window.location.href = 'Index.html';
     if(Page === "servicio") createZonePage();
@@ -95,6 +99,7 @@ function chekZone(){
 
             if (reSearch) {
               
+                
                 createServicePage();
             }
 
@@ -175,7 +180,7 @@ function filterResto(){
 
             if (reSearch.length > 0) {
               
-                console.log("entro");
+                Page = "resto";
                 removePage();
                 reSearch.forEach((resto) => { createResto(resto) })
                 
@@ -192,14 +197,14 @@ function filterResto(){
             }
         }
         )
-        .catch(error => {
+        /*.catch(error => {
             Swal.fire({
                 icon: 'error',
                 title: 'Parece que hubo un problema...',
                 text: error
                 
               })
-        });
+        });*/
 }
 //Funciones creadoras de HTML
 
@@ -222,6 +227,8 @@ function aplicarCambios() {
 //UBICACION
 function createZonePage(){
     
+    Page = "ubicacion";
+    
     img.setAttribute("src", "./image/ubicacion.png");
     
     input.setAttribute("placeholder", "Indique una zona");
@@ -241,6 +248,8 @@ function createZonePage(){
 //SERVICIO
 function createServicePage() {
 
+    Page = "servicio";
+    
     img.setAttribute("src", "./image/servicio.png");
 
     input.setAttribute("placeholder", "Indique un servicio");
@@ -256,21 +265,27 @@ function createServicePage() {
 //ESTILO
 function createStylePage() {
 
+    Page = "estilo";
+    
     img.setAttribute("src", "./image/estilo.png");
 
     input.setAttribute("placeholder", "Indique un estilo");
     
     btn.onclick = () => { 
+
+        console.log(preferencias);
         preferencias.push(localStorage.getItem("preferencias"));
         input.value = "";
-        filterResto() 
+        filterResto();
     }
 
-    aplicarCambios()
+    aplicarCambios();
 }
 //RESTO
 function createResto(resto) {
 
+    Page = "resto";
+    
     const card = document.createElement("div");
     const cardBody = document.createElement("div");
     const cardTittle = document.createElement("h5");
@@ -344,8 +359,6 @@ function createResto(resto) {
     mr.appendChild(textMuted);
     cardBody.appendChild(reservar);
     cardBody.appendChild(pedir);
-
-
 
 
 }

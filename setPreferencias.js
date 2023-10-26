@@ -65,7 +65,7 @@ btnAtras.onclick = () => {
 
     preferencias.pop();
     removePage();
-    if(Page === "ubicacion") window.location.href = 'Index.html';
+    if(Page === "ubicacion") window.location.href = 'index.html';
     if(Page === "servicio") createZonePage();
     if(Page === "estilo") createServicePage();
     if(Page === "resto") callStyle();

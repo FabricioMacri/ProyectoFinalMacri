@@ -171,7 +171,31 @@ volver.onclick = () => {
     }
     createZonePage(); 
 }
-
+const pagar = document.getElementById("pagarResto");
+pagar.onclick = () => { 
+    
+    Swal.fire({
+        title: '¿Esta seguro que quiere finalizar su compra?',
+        text: "Su pedido sera cobrado automaticamente con sus datos de facturación.",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Realizar pedido'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            localStorage.clear();
+          Swal.fire(
+            'Pedido realizado!',
+            'Su pedido ya fue procesado.',
+            'success'
+          );
+          
+        }
+      })
+      
+      
+}
 //Indico en la parte superior los datos del restaurante
 
 let tituloResto = document.querySelector("#tituloResto");

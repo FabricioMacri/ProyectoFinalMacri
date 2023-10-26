@@ -87,7 +87,7 @@ center.appendChild(btn);
 
 //Funciones de los botones
 
-function chekZone(){
+async function chekZone(){
 
     fetch("./data.json")
         .then(response => { return response.json(); })
@@ -131,7 +131,7 @@ function callStyle(){
 
 
 }
-function filterResto(){ 
+async function filterResto(){ 
 
     fetch("./data.json")
         .then(response => { return response.json(); })

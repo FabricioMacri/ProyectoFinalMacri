@@ -15,5 +15,5 @@ La aplicacion esta pensada para que el usuario ingrese con su cuenta, seleccione
 
   Informacion: data.json .
   Orden de HTML: Index -> preferencias .
-  Orden de JS: Login -> setPreferencias .
+  Orden de JS: Login -> setPreferencias -> restoPage
   CCS: Style y Bootstrap 5 .
